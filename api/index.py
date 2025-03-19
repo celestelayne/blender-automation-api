@@ -4,12 +4,10 @@ from werkzeug.utils import secure_filename
 import os
 import time
 from urllib.parse import urlparse
-from flask_serverless import FlaskServerless
 import requests  # Add this import
 
 # Initialize Flask app
 app = Flask(__name__)
-handler = FlaskServerless(app)
 
 # Get Blender path from environment variable (will need to be configured in Vercel)
 BLENDER_EXEC = os.getenv('BLENDER_EXEC', "/Applications/Blender.app/Contents/MacOS/Blender")
